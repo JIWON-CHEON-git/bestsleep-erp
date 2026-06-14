@@ -1,0 +1,625 @@
+[
+{
+  "model": "inventory.product",
+  "pk": "BS-FRM-K-009",
+  "fields": {
+    "name": "원목 프레임",
+    "category": "프레임",
+    "size": "K",
+    "unit_price": 380000,
+    "initial_stock": 9,
+    "safety_stock": 4,
+    "reorder_point": 6,
+    "moq": 10,
+    "production_lead_time_days": 10,
+    "delivery_lead_time_days": 4
+  }
+},
+{
+  "model": "inventory.product",
+  "pk": "BS-FRM-Q-008",
+  "fields": {
+    "name": "원목 프레임",
+    "category": "프레임",
+    "size": "Q",
+    "unit_price": 320000,
+    "initial_stock": 12,
+    "safety_stock": 5,
+    "reorder_point": 8,
+    "moq": 12,
+    "production_lead_time_days": 10,
+    "delivery_lead_time_days": 4
+  }
+},
+{
+  "model": "inventory.product",
+  "pk": "BS-MAT-K-003",
+  "fields": {
+    "name": "베이직 매트리스",
+    "category": "매트리스",
+    "size": "K",
+    "unit_price": 550000,
+    "initial_stock": 10,
+    "safety_stock": 5,
+    "reorder_point": 8,
+    "moq": 15,
+    "production_lead_time_days": 5,
+    "delivery_lead_time_days": 2
+  }
+},
+{
+  "model": "inventory.product",
+  "pk": "BS-MAT-K-005",
+  "fields": {
+    "name": "프리미엄 포켓 매트리스",
+    "category": "매트리스",
+    "size": "K",
+    "unit_price": 1090000,
+    "initial_stock": 6,
+    "safety_stock": 3,
+    "reorder_point": 5,
+    "moq": 10,
+    "production_lead_time_days": 7,
+    "delivery_lead_time_days": 3
+  }
+},
+{
+  "model": "inventory.product",
+  "pk": "BS-MAT-Q-002",
+  "fields": {
+    "name": "베이직 매트리스",
+    "category": "매트리스",
+    "size": "Q",
+    "unit_price": 450000,
+    "initial_stock": 15,
+    "safety_stock": 8,
+    "reorder_point": 12,
+    "moq": 20,
+    "production_lead_time_days": 5,
+    "delivery_lead_time_days": 2
+  }
+},
+{
+  "model": "inventory.product",
+  "pk": "BS-MAT-Q-004",
+  "fields": {
+    "name": "프리미엄 포켓 매트리스",
+    "category": "매트리스",
+    "size": "Q",
+    "unit_price": 890000,
+    "initial_stock": 8,
+    "safety_stock": 4,
+    "reorder_point": 6,
+    "moq": 10,
+    "production_lead_time_days": 7,
+    "delivery_lead_time_days": 3
+  }
+},
+{
+  "model": "inventory.product",
+  "pk": "BS-MAT-SS-001",
+  "fields": {
+    "name": "베이직 매트리스",
+    "category": "매트리스",
+    "size": "SS",
+    "unit_price": 350000,
+    "initial_stock": 20,
+    "safety_stock": 8,
+    "reorder_point": 12,
+    "moq": 20,
+    "production_lead_time_days": 5,
+    "delivery_lead_time_days": 2
+  }
+},
+{
+  "model": "inventory.product",
+  "pk": "BS-PIL-STD-010",
+  "fields": {
+    "name": "경추 베개",
+    "category": "베개",
+    "size": "STD",
+    "unit_price": 59000,
+    "initial_stock": 60,
+    "safety_stock": 20,
+    "reorder_point": 30,
+    "moq": 60,
+    "production_lead_time_days": 2,
+    "delivery_lead_time_days": 2
+  }
+},
+{
+  "model": "inventory.product",
+  "pk": "BS-TOP-K-007",
+  "fields": {
+    "name": "메모리폼 토퍼",
+    "category": "토퍼",
+    "size": "K",
+    "unit_price": 210000,
+    "initial_stock": 25,
+    "safety_stock": 10,
+    "reorder_point": 15,
+    "moq": 30,
+    "production_lead_time_days": 3,
+    "delivery_lead_time_days": 2
+  }
+},
+{
+  "model": "inventory.product",
+  "pk": "BS-TOP-Q-006",
+  "fields": {
+    "name": "메모리폼 토퍼",
+    "category": "토퍼",
+    "size": "Q",
+    "unit_price": 180000,
+    "initial_stock": 30,
+    "safety_stock": 10,
+    "reorder_point": 15,
+    "moq": 30,
+    "production_lead_time_days": 3,
+    "delivery_lead_time_days": 2
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0001",
+  "fields": {
+    "order_date": "2026-06-01",
+    "product": "BS-MAT-Q-002",
+    "quantity": 5,
+    "customer_name": "김서연",
+    "desired_delivery_date": "2026-06-05",
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0002",
+  "fields": {
+    "order_date": "2026-06-01",
+    "product": "BS-TOP-Q-006",
+    "quantity": 8,
+    "customer_name": "이준호",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0003",
+  "fields": {
+    "order_date": "2026-06-01",
+    "product": "BS-PIL-STD-010",
+    "quantity": 10,
+    "customer_name": "박민지",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0004",
+  "fields": {
+    "order_date": "2026-06-02",
+    "product": "BS-MAT-Q-002",
+    "quantity": 4,
+    "customer_name": "최우진",
+    "desired_delivery_date": "2026-06-06",
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0005",
+  "fields": {
+    "order_date": "2026-06-02",
+    "product": "BS-MAT-SS-001",
+    "quantity": 6,
+    "customer_name": "정하늘",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0006",
+  "fields": {
+    "order_date": "2026-06-02",
+    "product": "BS-MAT-K-005",
+    "quantity": 3,
+    "customer_name": "강도윤",
+    "desired_delivery_date": "2026-06-09",
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0007",
+  "fields": {
+    "order_date": "2026-06-03",
+    "product": "BS-MAT-Q-002",
+    "quantity": 6,
+    "customer_name": "윤서아",
+    "desired_delivery_date": "2026-06-07",
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0008",
+  "fields": {
+    "order_date": "2026-06-03",
+    "product": "BS-FRM-Q-008",
+    "quantity": 4,
+    "customer_name": "임지후",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0009",
+  "fields": {
+    "order_date": "2026-06-03",
+    "product": "BS-MAT-K-003",
+    "quantity": 5,
+    "customer_name": "한가은",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0010",
+  "fields": {
+    "order_date": "2026-06-04",
+    "product": "BS-MAT-Q-002",
+    "quantity": 5,
+    "customer_name": "오수빈",
+    "desired_delivery_date": "2026-06-08",
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0011",
+  "fields": {
+    "order_date": "2026-06-04",
+    "product": "BS-MAT-K-005",
+    "quantity": 4,
+    "customer_name": "신예준",
+    "desired_delivery_date": "2026-06-11",
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0012",
+  "fields": {
+    "order_date": "2026-06-04",
+    "product": "BS-TOP-K-007",
+    "quantity": 10,
+    "customer_name": "권하준",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0013",
+  "fields": {
+    "order_date": "2026-06-05",
+    "product": "BS-PIL-STD-010",
+    "quantity": 25,
+    "customer_name": "문채원",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0014",
+  "fields": {
+    "order_date": "2026-06-05",
+    "product": "BS-MAT-SS-001",
+    "quantity": 8,
+    "customer_name": "배서준",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0015",
+  "fields": {
+    "order_date": "2026-06-05",
+    "product": "BS-FRM-K-009",
+    "quantity": 5,
+    "customer_name": "조유나",
+    "desired_delivery_date": "2026-06-12",
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0016",
+  "fields": {
+    "order_date": "2026-06-06",
+    "product": "BS-MAT-Q-002",
+    "quantity": 3,
+    "customer_name": "남도현",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0017",
+  "fields": {
+    "order_date": "2026-06-06",
+    "product": "BS-MAT-Q-004",
+    "quantity": 4,
+    "customer_name": "유시우",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0018",
+  "fields": {
+    "order_date": "2026-06-06",
+    "product": "BS-FRM-K-009",
+    "quantity": 4,
+    "customer_name": "구하린",
+    "desired_delivery_date": "2026-06-15",
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0019",
+  "fields": {
+    "order_date": "2026-06-07",
+    "product": "BS-MAT-K-003",
+    "quantity": 4,
+    "customer_name": "홍지원",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0020",
+  "fields": {
+    "order_date": "2026-06-07",
+    "product": "BS-TOP-Q-006",
+    "quantity": 12,
+    "customer_name": "전수아",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0021",
+  "fields": {
+    "order_date": "2026-06-08",
+    "product": "BS-MAT-Q-002",
+    "quantity": 6,
+    "customer_name": "고은우",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0022",
+  "fields": {
+    "order_date": "2026-06-08",
+    "product": "BS-MAT-K-005",
+    "quantity": 3,
+    "customer_name": "서지안",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0023",
+  "fields": {
+    "order_date": "2026-06-08",
+    "product": "BS-PIL-STD-010",
+    "quantity": 20,
+    "customer_name": "황민준",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0024",
+  "fields": {
+    "order_date": "2026-06-09",
+    "product": "BS-MAT-SS-001",
+    "quantity": 5,
+    "customer_name": "송하율",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0025",
+  "fields": {
+    "order_date": "2026-06-09",
+    "product": "BS-FRM-Q-008",
+    "quantity": 5,
+    "customer_name": "안서윤",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0026",
+  "fields": {
+    "order_date": "2026-06-10",
+    "product": "BS-MAT-Q-002",
+    "quantity": 4,
+    "customer_name": "류준서",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0027",
+  "fields": {
+    "order_date": "2026-06-10",
+    "product": "BS-MAT-Q-004",
+    "quantity": 3,
+    "customer_name": "백지아",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0028",
+  "fields": {
+    "order_date": "2026-06-10",
+    "product": "BS-FRM-K-009",
+    "quantity": 3,
+    "customer_name": "노이서",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0029",
+  "fields": {
+    "order_date": "2026-06-11",
+    "product": "BS-TOP-K-007",
+    "quantity": 12,
+    "customer_name": "심도경",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0030",
+  "fields": {
+    "order_date": "2026-06-11",
+    "product": "BS-MAT-K-003",
+    "quantity": 4,
+    "customer_name": "양하은",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0031",
+  "fields": {
+    "order_date": "2026-06-12",
+    "product": "BS-MAT-Q-002",
+    "quantity": 5,
+    "customer_name": "추서진",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0032",
+  "fields": {
+    "order_date": "2026-06-12",
+    "product": "BS-PIL-STD-010",
+    "quantity": 30,
+    "customer_name": "방예린",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0033",
+  "fields": {
+    "order_date": "2026-06-13",
+    "product": "BS-MAT-SS-001",
+    "quantity": 6,
+    "customer_name": "변지호",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0034",
+  "fields": {
+    "order_date": "2026-06-13",
+    "product": "BS-MAT-K-005",
+    "quantity": 3,
+    "customer_name": "선우주아",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.order",
+  "pk": "ORD-0035",
+  "fields": {
+    "order_date": "2026-06-14",
+    "product": "BS-MAT-Q-002",
+    "quantity": 4,
+    "customer_name": "마하준",
+    "desired_delivery_date": null,
+    "status": "active",
+    "cancelled_at": null
+  }
+},
+{
+  "model": "inventory.simulationconfig",
+  "pk": 1,
+  "fields": {
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-30"
+  }
+}
+]
