@@ -43,12 +43,12 @@ def dashboard(request):
     structural_shortage_products: list[str] = []
 
     for product in Product.objects.all():
-        current_stock, available_stock = selectors.get_current_and_available_stock(
+        current_stock, _available_stock = selectors.get_current_and_available_stock(
             product, reference_date
         )
         if current_stock <= product.reorder_point:
             products_below_reorder += 1
-        if available_stock < 0:
+        if current_stock == 0:
             products_in_shortage += 1
 
         row = selectors.get_ledger_row(product, reference_date)

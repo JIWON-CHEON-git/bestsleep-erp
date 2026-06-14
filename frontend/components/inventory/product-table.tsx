@@ -110,7 +110,7 @@ export function ProductTable({ products, selectedSku, onSelect }: ProductTablePr
                     : idx % 2 === 1
                     ? "bg-gray-50/30 hover:bg-row-hover"
                     : "bg-white hover:bg-row-hover",
-                  p.available_stock < 0
+                  p.status === "shortage"
                     ? "border-l-red-500"
                     : p.status === "below_reorder" || p.status === "warning"
                     ? "border-l-amber-400"

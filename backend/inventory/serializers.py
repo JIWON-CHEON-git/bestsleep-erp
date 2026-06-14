@@ -45,8 +45,8 @@ class ProductSerializer(serializers.Serializer):
         return selectors.get_backorder_count(product, self.context["reference_date"])
 
     def get_status(self, product: Product) -> str:
-        current_stock, available_stock = self._stocks(product)
-        return selectors.get_product_status(current_stock, available_stock, product)
+        current_stock, _available_stock = self._stocks(product)
+        return selectors.get_product_status(current_stock, product)
 
 
 class DailyLedgerSerializer(serializers.Serializer):

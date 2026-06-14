@@ -97,22 +97,31 @@ def is_order_pending_as_of(fulfillment: OrderFulfillment, reference_date: date) 
 
 
 def get_backorder_count(product: Product, reference_date: date) -> int:
-    """기준일 시점에 이 제품에서 백오더 대기 중인 활성 주문 수."""
+    """기준일 시점에 이 제품에서 백오더 대기 중인 활성 주문 수.
+
+    주문일이 기준일보다 미래인 주문은 "아직 접수되지 않은 주문"이므로
+    백오더로 집계하지 않는다.
+    """
 
     fulfillments = OrderFulfillment.objects.filter(
         order__product=product,
         order__status=OrderStatus.ACTIVE,
+        order__order_date__lte=reference_date,
     ).select_related("order")
     return sum(1 for f in fulfillments if is_order_pending_as_of(f, reference_date))
 
 
-def get_product_status(current_stock: int, available_stock: int, product: Product) -> str:
+def get_product_status(current_stock: int, product: Product) -> str:
     """제품 목록(E-2)의 재고 상태 분류.
 
     우선순위: shortage > below_reorder > warning > normal.
+
+    재주문 로직(check_reorder_and_place_orders)이 매일 가용재고를 재주문점
+    초과로 회복시켜 두기 때문에, 저장된 available_stock은 음수가 될 수 없다.
+    따라서 "부족(품절)"은 현재고가 0인지로 판단한다.
     """
 
-    if available_stock < 0:
+    if current_stock == 0:
         return ProductStatus.SHORTAGE
     if current_stock <= product.reorder_point:
         return ProductStatus.BELOW_REORDER

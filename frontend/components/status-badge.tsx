@@ -4,7 +4,7 @@ import type { OrderViewStatus, ProductionOrderDisplayStatus, ProductStatus } fro
 const PRODUCT_STATUS_LABELS: Record<ProductStatus, string> = {
   normal: "정상",
   warning: "주의",
-  below_reorder: "발주중",
+  below_reorder: "발주됨",
   shortage: "부족",
 };
 
